@@ -56,6 +56,10 @@ print_option( BUILD_SHARED_LIBS  )
 print_option( ENABLE_DATE_TESTING )
 print_option( DISABLE_STRING_VIEW )
 
+# Turn on at least first level optimization to eliminate MacOS linker
+# warnings about weak symbols.
+add_compile_options(-O)
+
 #[===================================================================[
    date (header only) library
 #]===================================================================]
